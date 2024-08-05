@@ -1,0 +1,21 @@
+*{
+    margin: 10px;
+    padding: 2px;
+}
+header{
+    margin: 10vw;
+    width: 100%;
+    margin-top: auto;
+}
+.a h2{
+        margin: 10vw;
+        width: 100%;
+        margin-top: auto;
+        color: #a93434;
+}
+.a p{
+    margin: 10vw;
+        width: 100%;
+        margin-top: auto;
+        color: #a93434;
+}

@@ -1,0 +1,61 @@
+*{
+    margin: 10px;
+    padding: 2px;
+    background-image: url(images\5.jpg);
+}
+
+p {
+    color: rgb(109, 139, 180);
+}
+
+h1 {
+
+    color: rgb(78, 121, 212);
+    background-image:url();
+
+}
+
+/*un*/
+
+header{
+    border:0px #9d8189 dotted;
+    padding: 7px;
+    height: 80px;
+    width: 100vw;
+}
+
+header a{
+    text-decoration: none;
+}
+
+header a:hover{
+    text-decoration: underline;
+}
+
+header p{
+    display: inline;
+    margin-right: 5vw;
+}
+
+header ul{
+    position: absolute;
+    right: 5vw;
+    top: 0vw;
+    line-height: 10vw;
+}
+
+.introduce a{
+    text-decoration: none;
+}
+
+.introduce a:hover{
+    text-decoration: underline;
+}
+
+h1 a{
+    text-decoration: none;
+}
+
+h1 a:hover{
+    text-decoration: underline;
+}
