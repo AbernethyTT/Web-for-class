@@ -77,3 +77,33 @@ h1 a:hover{
  ul h3{
     color: rgb(75, 207, 163)
 }
+header h1{
+    margin: 10vw;
+    padding: 0vw;
+    top: 5%;
+}
+.a{
+    margin: 5vw;
+    padding: 5vw;
+    top: 10%;
+}
+.b{
+    margin: 5vw;
+    padding: 5vw;
+    top: 10%;
+}
+.c{
+    margin: 5vw;
+    padding: 5vw;
+    top: 10%;
+}
+.d{
+    margin: 5vw;
+    padding: 5vw;
+    top: 10%;
+}
+.z{
+    margin: 5vw;
+    padding: 5vw;
+    top: 10%;
+}
