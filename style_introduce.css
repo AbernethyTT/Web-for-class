@@ -1,23 +1,79 @@
 *{
-    margin: 10px;
-    padding: 2px;
+    margin: 5vw;
+    padding: 5vw;
+    top: 0%;
+    /*background-image: url();*/
 }
+
+p {
+    color: rgb(109, 139, 180);
+}
+
+h1 {
+
+    color: rgb(78, 121, 212);
+    background-image:url();
+
+}
+
 header{
-    margin: 10vw;
-    width: 100%;
-    margin-top: auto;
+    border:10px #9d8189 dotted;
+    padding: 7px;
+    height: 10px;
+    width: 100vw;
 }
-.a h2{
-        margin: 10vw;
-        width: 100%;
-        margin-top: auto;
-        color: #a93434;
+
+header a{
+    text-decoration: none;
 }
-/*
-.a p{
-    margin: 10vw;
-        width: 100%;
-        margin-top: auto;
-        color: #a93434;
+
+header a:hover{
+    text-decoration: underline;
 }
-        */
+
+header p{
+    display: inline;
+    margin-right: 5vw;
+}
+
+.nav ul{
+    position: absolute;
+    right: 10%;
+    top: 25%;
+    line-height: 0vw;
+}
+.nav a{
+    text-decoration: none;
+    color: rgb(109, 139, 180);
+}
+.nav a:hover{
+    text-decoration: underline;
+}
+.nav h3{
+    float: left;
+    width: 80px;
+    letter-spacing: 2px;
+}
+.nav h2{
+    letter-spacing: 2px;
+}
+
+.nav{
+    font-family: YSH_Font;
+}
+.more a{
+    color: #b84444;
+    font-family: YSH_Font;
+    letter-spacing: 3px;
+}
+h1 a{
+    text-decoration: none;
+}
+
+h1 a:hover{
+    text-decoration: underline;
+}
+
+ ul h3{
+    color: rgb(75, 207, 163)
+}
