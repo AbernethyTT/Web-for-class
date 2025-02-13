@@ -28,6 +28,9 @@
         .page-back {
             transform: rotateY(180deg);
         }
+        .hidden {
+            display: none;
+        }
     </style>
     <link rel="icon" href="images/classhuizhang.png" type="image/png">
 </head>
@@ -46,7 +49,7 @@
          }
     </style>
     
-    <div class="nav">
+    <div class="nav hidden" id="nav">
         <!-- 导航栏 -->
         <h1 style="color: rgb(86, 186, 186);">5 Classes in Senior One</h1>
         <h2>We are students in 5 Classes in Senior One</h2>
@@ -79,7 +82,7 @@
 
     <main>
         <!-- 主要内容 -->
-    <section class="page">
+    <section class="page hidden" id="page">
         <div class="page-content">
             <p>The Exploration Never Ends</p>
             <ol>
@@ -94,7 +97,7 @@
         </div>
     </section>
     <!-- 登录表单 -->
-    <section class="login">
+    <section class="login" id="login">
         <h2>登录</h2>
         <form>
             <label for="username">用户名:</label>
@@ -106,19 +109,61 @@
     </section>
     </main>
 
-    <div class="more">
+    <div class="more hidden" id="more">
         <!-- 更多链接 -->
     <h1><a href="More.html">More</a></h1>
     </div>
-    <script src="scrip_indext.js"></script>
-    <script>
+    <script src="scrip_indext.js" type="module"></script>
+    <script type="module">
+        import users from './database.js';
+
         // 旋转翻页的 JavaScript 代码
-        document.querySelector('.page').addEventListener('click', function() {
+        document.querySelector('.page').addEventListener('dblclick', function() {
             this.classList.toggle('flipped');
+            setTimeout(() => {
+                window.location.href = getNextPage();
+            }, 600); // 等待翻转动画完成后跳转
         });
+
+        // 获取下一个页面的 URL
+        function getNextPage() {
+            const pages = [
+                'index.html',
+                'introduce.html',
+                'history.html',
+                'develop.html',
+                'future.html'
+            ];
+            const currentPage = window.location.pathname.split('/').pop();
+            const currentIndex = pages.indexOf(currentPage);
+            const nextIndex = (currentIndex + 1) % pages.length;
+            return pages[nextIndex];
+        }
+
+        // 登录功能的 JavaScript 代码
+        function login() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // 验证用户
+            const user = users.find(user => user.username === username && user.password === password);
+            if (user) {
+                alert('登录成功');
+                document.getElementById('login').classList.add('hidden');
+                document.getElementById('nav').classList.remove('hidden');
+                document.getElementById('page').classList.remove('hidden');
+                document.getElementById('more').classList.remove('hidden');
+                document.getElementById('footer').classList.remove('hidden');
+            } else {
+                alert('用户名或密码错误');
+            }
+        }
+
+        // 绑定登录按钮的点击事件
+        document.getElementById('loginButton').addEventListener('click', login);
     </script>
 
-    <footer>
+    <footer class="hidden" id="footer">
         <!-- 页脚 -->
         <p>By AS_IX&copy; 2024</p>
     </footer>

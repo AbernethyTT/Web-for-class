@@ -9,8 +9,8 @@ const users = [
         password: '2'
     },
     {
-        username: '1',
-        password: '1'
+        username: '3',
+        password: '3'
     }
 ];
 
