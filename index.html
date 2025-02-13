@@ -14,8 +14,22 @@
         h1{
             letter-spacing: 3px;
         }
+        /* 旋转翻页的样式 */
+        .page {
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+        .page.flipped {
+            transform: rotateY(180deg);
+        }
+        .page-content {
+            backface-visibility: hidden;
+        }
+        .page-back {
+            transform: rotateY(180deg);
+        }
     </style>
-    <link rel="icon" href="images/Banhui.png" type="image/png">
+    <link rel="icon" href="images/classhuizhang.png" type="image/png">
 </head>
                
 <body>
@@ -32,26 +46,24 @@
          }
     </style>
     
-    <body>
-        <div class="nav">
-            <h1 style="color: rgb(86, 186, 186);">5 Classes in Senior One</h1>
-            <h2>We are students in 5 Classes in Senior One</h2>
-            <ul>
-                    <h3><a href="index.html">index</a></h3>
-                    <h3><a href="introduce.html">introduce</a></h3>
-                    <h3><a href="history.html">History</a></h3>
-                    <h3><a href="develop.html">Develop</a></h3>
-                    <h3><a href="future.html">Future</a></h3>
-                    <!-- h2后省略 style="color: rgb(107, 214, 178);"-->
-            </ul>
-        </div>
-        <!--<div class="content"></div>-->
+    <div class="nav">
+        <!-- 导航栏 -->
+        <h1 style="color: rgb(86, 186, 186);">5 Classes in Senior One</h1>
+        <h2>We are students in 5 Classes in Senior One</h2>
+        <ul>
+                <h3><a href="index.html">index</a></h3>
+                <h3><a href="introduce.html">introduce</a></h3>
+                <h3><a href="history.html">History</a></h3>
+                <h3><a href="develop.html">Develop</a></h3>
+                <h3><a href="future.html">Future</a></h3>
+                <!-- h2后省略 style="color: rgb(107, 214, 178);"-->
+        </ul>
+    </div>
+    <!--<div class="content"></div>-->
         
-    </body>
-
-<style type="text/css">
+    <style type="text/css">
 	body{
-		background: url("images/Qfu.jpg") no-repeat center center fixed;
+		background: url("images/classflag.jpg") no-repeat center center fixed;
                 -webkit-background-size: cover;
                 -o-background-size: cover;                
                 background-size: cover;
@@ -66,31 +78,50 @@
     <!--text-->
 
     <main>
-
-    <section>
-    
-    <p>The Exploration Never Ends</p>
-    <ol>
-        <h2><li>The point of Senior 1: None</li></h2>
-        <h2><li>The point of Senior 2: None</li></h2>
-        <h2><li>The point of Senior 3: None</li></h2>
-    </ol>
-    <!--in to another web-->
-
-    <!--down is photo-->
-    
-    <img src="images/Banhui.png"alt="waiting">
-
+        <!-- 主要内容 -->
+    <section class="page">
+        <div class="page-content">
+            <p>The Exploration Never Ends</p>
+            <ol>
+                <h2><li>The point of Senior 1: None</li></h2>
+                <h2><li>The point of Senior 2: None</li></h2>
+                <h2><li>The point of Senior 3: None</li></h2>
+            </ol>
+            <img src="images/Banhui.png" alt="waiting">
+        </div>
+        <div class="page-back">
+            <p>Back of the page</p>
+        </div>
     </section>
-
+    <!-- 登录表单 -->
+    <section class="login">
+        <h2>登录</h2>
+        <form>
+            <label for="username">用户名:</label>
+            <input type="text" id="username" name="username"><br>
+            <label for="password">密码:</label>
+            <input type="password" id="password" name="password"><br>
+            <button type="button" id="loginButton">登录</button>
+        </form>
+    </section>
     </main>
 
     <div class="more">
+        <!-- 更多链接 -->
     <h1><a href="More.html">More</a></h1>
     </div>
     <script src="scrip_indext.js"></script>
+    <script>
+        // 旋转翻页的 JavaScript 代码
+        document.querySelector('.page').addEventListener('click', function() {
+            this.classList.toggle('flipped');
+        });
+    </script>
 
-    <footer><p>By AS_IX&copy; 2024</p></footer>
+    <footer>
+        <!-- 页脚 -->
+        <p>By AS_IX&copy; 2024</p>
+    </footer>
 
 </body>
 </html>
